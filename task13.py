@@ -18,22 +18,22 @@ all_Article_tag = bSoup.find_all('article', {'class':'product_pod'})
 # # allH3 = bSoup.find('h3').find('a').attrs['title']
 # # print(allH3)
 
-# # allRating = bSoup.find('p').attrs['class'][1]
-# # print(allRating)
+# allRating = bSoup.find('p').attrs['class'][1]
+# print(allRating)
 
 # # allPrice = bSoup.find('p',{'class' : 'price_color'}).getText()
 # # print(allPrice)
 
 def numRating(num):
-    if num == 'one':
+    if num == 'One':
         return 1
-    elif num == 'two':
+    elif num == 'Two':
         return 2
-    elif num == 'three':
+    elif num == 'Three':
         return 3
-    elif num == 'four':
+    elif num == 'Four':
         return 4
-    elif num == 'five':
+    elif num == 'Five':
         return 5
     else:
         return 0
