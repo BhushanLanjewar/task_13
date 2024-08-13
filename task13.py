@@ -38,18 +38,21 @@ def numRating(num):
     else:
         return 0
     
-
-
+bookData = []
 for i in all_Article_tag:
     Title = i.find('h3').find('a').attrs['title']
     Rating = numRating(i.find('p').attrs['class'][1])
     Price = i.find('p',{'class' : 'price_color'}).getText().split('£')[1]
 
-    print({
+    bookData.append({
       'Title' : Title,
       'Rating' : Rating,
       'Price' : Price
     })
+
+print(bookData)
+
+
 
 
 
